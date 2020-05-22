@@ -1,0 +1,26 @@
+.navbar-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #CE4545;
+}
+
+.group-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+}
+
+.dropdown-button {
+    margin-right: 16px;
+}
+
+.group-name {
+    font-size: 22px;
+}
+
+.teacher-avatar {
+    margin-right: 16px;
+}

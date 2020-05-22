@@ -15,10 +15,14 @@
 
 .dropdown-button {
     margin-right: 16px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
 .group-name {
     font-size: 22px;
+    font-weight: bold;
 }
 
 .teacher-avatar {

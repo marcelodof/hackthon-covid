@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import { Navbar } from './Components/Navbar/Navbar';
 import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer';
+import { StudentsFilter } from './Components/StudentsFilter/StudentsFilter';
 
-
-// TODO: ADD O ENDERECO DO ESTUDANTE + icone
+import './App.css';
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
     [ 
       {
         name: "Rafael Rahal",
+        hasAddress: false,
         hasSmartphone: true,
         has3G: true,
         hasWifi: false,
@@ -19,6 +20,31 @@ function App() {
       },
       {
         name: "Marcelo Dias",
+        hasAddress: true,
+        hasSmartphone: true,
+        has3G: true,
+        hasWifi: true,
+        hasResponsible: true,
+      },
+      {
+        name: "Paulo de Paula",
+        hasAddress: true,
+        hasSmartphone: true,
+        has3G: true,
+        hasWifi: true,
+        hasResponsible: false,
+      },
+      {
+        name: "Matheus Ishimoto",
+        hasAddress: true,
+        hasSmartphone: false,
+        has3G: false,
+        hasWifi: false,
+        hasResponsible: false,
+      },
+      {
+        name: "Gabriel Pera",
+        hasAddress: true,
         hasSmartphone: true,
         has3G: true,
         hasWifi: true,
@@ -31,7 +57,8 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="content-container">
-        <StudentsContainer studentList={studentsList} />
+        <StudentsContainer studentsList={studentsList} />
+        <StudentsFilter />
       </div>
     </div>
   );

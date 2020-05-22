@@ -4,13 +4,14 @@ import { StudentItem } from '../StudentItem/StudentItem';
 
 import './StudentsContainer.css'
 
-export const StudentsContainer = ({studentList}) => {
+export const StudentsContainer = ({studentsList}) => {
     return (
         <div className="students-container">
             {
-                studentList.map((student) => {
+                studentsList.map((student) => {
                     return <StudentItem 
-                            name={student.name} 
+                            name={student.name}
+                            hasAddress={student.hasAddress}
                             hasSmartphone={student.hasSmartphone}
                             has3G={student.has3G}
                             hasWifi={student.hasWifi}

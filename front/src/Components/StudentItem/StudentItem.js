@@ -1,11 +1,11 @@
 import React from 'react';
 import { GiSmartphone } from 'react-icons/gi'
 import { FiWifiOff, FiWifi } from 'react-icons/fi';
-import { GoPerson, GoLocation } from 'react-icons/go'
+import { GoLocation } from 'react-icons/go'
 
 import './StudentItem.css';
 
-export const StudentItem = ({name, hasAddress, hasSmartphone, hasWifi, has3G, hasResponsible}) => {
+export const StudentItem = ({name, hasAddress, hasSmartphone, hasWhatsApp, hasWifi}) => {
     return (
         <div className="item-container">
             <div className="student-name">
@@ -14,9 +14,8 @@ export const StudentItem = ({name, hasAddress, hasSmartphone, hasWifi, has3G, ha
             <div className="icons-container">
                 <GoLocation style={!hasAddress && {color: '#FAFAFA'}} />
                 <GiSmartphone style={!hasSmartphone && {color: '#FAFAFA'}} />
-                <FiWifiOff style={!has3G && {color: '#FAFAFA'}}/>
+                <FiWifiOff style={!hasWhatsApp && {color: '#FAFAFA'}}/>
                 <FiWifi style={!hasWifi && {color: '#FAFAFA'}} />
-                <GoPerson style={!hasResponsible && {color: '#FAFAFA'}} />
             </div>
         </div>
     )

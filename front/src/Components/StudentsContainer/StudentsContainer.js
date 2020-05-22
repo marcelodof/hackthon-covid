@@ -13,9 +13,8 @@ export const StudentsContainer = ({studentsList}) => {
                             name={student.name}
                             hasAddress={student.hasAddress}
                             hasSmartphone={student.hasSmartphone}
-                            has3G={student.has3G}
+                            hasWhatsApp={student.hasWhatsApp}
                             hasWifi={student.hasWifi}
-                            hasResponsible={student.hasResponsible}
                             />
                 })
             }            

@@ -13,10 +13,10 @@ export const StudentItem = ({name, hasAddress, hasSmartphone, hasWhatsApp, hasWi
                 {name}
             </div>
             <div className="icons-container">
-                <GoLocation style={!hasAddress && {color: '#FAFAFA'}} />
-                <GiSmartphone style={!hasSmartphone && {color: '#FAFAFA'}} />
-                <FaWhatsapp style={!hasWhatsApp && {color: '#FAFAFA'}}/>
-                <FiWifi style={!hasWifi && {color: '#FAFAFA'}} />
+                <GoLocation style={!hasAddress && {color: '#ff6f69'}} className="icon" />
+                <GiSmartphone style={!hasSmartphone && {color: '#ff6f69'}} className="icon" />
+                <FaWhatsapp style={!hasWhatsApp && {color: '#ff6f69'}} className="icon"/>
+                <FiWifi style={!hasWifi && {color: '#ff6f69'}} className="icon" />
             </div>
         </div>
     )

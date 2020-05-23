@@ -1,0 +1,30 @@
+.exercise-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #008744;
+    color: #f7f7f7;
+    border-bottom: 2px solid #008744;
+    padding: 8px;
+}
+.exercise-confirm-header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.exercise-dismiss {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-wrapper {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

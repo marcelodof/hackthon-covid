@@ -38,3 +38,8 @@
     color: #FAFAFA;
     font-weight: bold;
 }
+
+.pressed {
+    background-color: #454e61;
+    border: 2px solid #454e61;
+}

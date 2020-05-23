@@ -1,5 +1,6 @@
 import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaUserCircle } from 'react-icons/fa';
 
 import "./Navbar.css"
 
@@ -16,7 +17,7 @@ export const Navbar = () => {
                 </div>
             </div>
             <div className="teacher-avatar">
-                Foto
+                    <FaUserCircle />
             </div>
 
         </div>

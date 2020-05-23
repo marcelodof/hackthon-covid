@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid black;
+    border: 1px solid #2a4d69;
+    border-radius: 5px;
     padding: 8px;
     margin-bottom: 16px;
+    box-shadow: 1px 1px 1px 1px #888888;
 }
 
 .student-name {
@@ -20,4 +22,8 @@
     font-size: 24px;
     width: 120px;
     justify-content: space-between;
+}
+
+.icon {
+    color: #96ceb4;
 }

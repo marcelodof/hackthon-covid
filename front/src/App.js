@@ -4,7 +4,7 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer';
 import { StudentsFilter } from './Components/StudentsFilter/StudentsFilter';
 import { NumberOfStudents } from './Components/NumberOfStudents/NumberOfStudents'
-import { DefaultStudents } from './Components/DefaultStudents'
+import { DefaultStudents } from './Static/DefaultStudents'
 import './App.css';
 
 const defaultStudents = DefaultStudents

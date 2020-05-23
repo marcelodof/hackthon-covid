@@ -4,9 +4,9 @@ import { StudentItem } from '../StudentItem/StudentItem';
 
 import './StudentsContainer.css'
 
-export const StudentsContainer = ({studentsList, showPhone, children}) => {
+export const StudentsContainer = ({studentsList, showPhone, children, hasShadow}) => {
     return (
-        <div className="students-container">
+        <div className={`students-container ${hasShadow ? "shadow" : null}`}>
             <div className='student-container-list'>
                 {
                     studentsList.map((student) => {

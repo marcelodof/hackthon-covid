@@ -26,11 +26,8 @@
     flex-direction: row;
 }
 
-.form-input {
-    background-color: #e7eff6;
-    padding: 16px;
-    border: 1px solid #e7eff6;
-    border-radius: 7px;
+.input-form {
+    min-width: 50vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }

@@ -96,7 +96,7 @@ function App() {
       <Navbar />
       <div className="content-container">
         <div className="all-students">
-          <StudentsContainer studentsList={defaultStudents}>
+          <StudentsContainer studentsList={defaultStudents} hasShadow>
               <NumberOfStudents metricsText={metricsText} />  
           </StudentsContainer>
         </div>

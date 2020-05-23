@@ -37,6 +37,7 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                 <div className='filter-content'>
                     <StudentsContainer
                         studentsList={studentsList}
+                        hasShadow
                         showPhone={false}>
                         {activeFilter && <NumberOfStudents metricsText={metricsText} actionText={"Enviar Tarefa"} toggleModal={toggleModal} />}
                     </StudentsContainer>

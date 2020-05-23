@@ -4,7 +4,7 @@ import { StudentItem } from '../StudentItem/StudentItem';
 
 import './StudentsContainer.css'
 
-export const StudentsContainer = ({studentsList, studentsMetrics}) => {
+export const StudentsContainer = ({studentsList}) => {
     return (
         <div className="students-container">
             {
@@ -18,12 +18,6 @@ export const StudentsContainer = ({studentsList, studentsMetrics}) => {
                             />
                 })
             }
-            <div className="students-metrics">
-                {
-                    studentsMetrics
-                }
-                %
-            </div>
         </div>
     )
 }

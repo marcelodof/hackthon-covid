@@ -1,8 +1,9 @@
 import React from 'react';
 
 import './StudentsFilter.css';
+import {StudentsContainer} from '../StudentsContainer/StudentsContainer'
 
-export const StudentsFilter = ({handleFilter}) => {
+export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics}) => {
     return (
         <div className='filter-wrapper'>
             <div className='filter-buttons'>
@@ -20,7 +21,12 @@ export const StudentsFilter = ({handleFilter}) => {
                 </div>
             </div>
             <div className='filter-content'>
-                
+                <StudentsContainer studentsList={studentsList}/>
+                <div className="students-metrics">
+                    {studentsMetrics.studentsCount} - 
+                    {studentsMetrics.studentsPercentage}
+                    %
+                </div>
             </div>
         </div>
     )

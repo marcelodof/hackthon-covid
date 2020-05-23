@@ -58,7 +58,7 @@ function App() {
 
     const [activeFilter, setActiveFilter] = useState(null);
 
-    const [filteredStudentsPercentage, setFilteredStudentsPercentage] = useState(100);
+    const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:null, studentsPercentage:null});
 
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
@@ -73,10 +73,10 @@ function App() {
           return student[filter] && student["hasSmartphone"]
       }
     })
-    const percentage = (filteredStudents.length/defaultStudents.length).toFixed(2)*100
-    //const studentsCount = filteredStudents.length
+    const studentsPercentage = (filteredStudents.length/defaultStudents.length).toFixed(2)*100
+    const studentsCount = filteredStudents.length
+    setFilteredStudentsMetrics({studentsCount:studentsCount, studentsPercentage:studentsPercentage})
     setStudentsList(filteredStudents)
-    setFilteredStudentsPercentage(percentage)
     setActiveFilter(filter);
   }
   
@@ -84,8 +84,11 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="content-container">
-        <StudentsContainer studentsList={studentsList} studentsMetrics={filteredStudentsPercentage}/>
-        <StudentsFilter handleFilter={filterStudents}/>
+        <StudentsContainer studentsList={defaultStudents} />
+        <StudentsFilter 
+          handleFilter={filterStudents} 
+          studentsList={studentsList}
+          studentsMetrics={filteredStudentsMetrics} />
       </div>
     </div>
   );

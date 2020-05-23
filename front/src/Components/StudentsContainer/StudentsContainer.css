@@ -1,7 +1,6 @@
 .students-container {
     background-color: #e7eff6;
-    height: 600px;
-    width: 500px;
+    flex: 1;
     padding: 16px;
     border: 1px solid #e7eff6;
     border-radius: 7px;
@@ -9,4 +8,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.student-container-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 60vh;
 }

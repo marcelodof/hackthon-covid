@@ -40,7 +40,7 @@ export const DefaultStudents = [
       phone: 11987378945,
     },
     {
-      name: "Bruno Albertini",
+      name: "Beatriz Silva",
       hasAddress: false,
       hasSmartphone: false,
       hasWhatsApp: false,
@@ -56,7 +56,7 @@ export const DefaultStudents = [
         phone: 1175868731,
     },
     {
-        name: "Graça Bressan",
+        name: "Maria Paula de Souza",
         hasAddress: true,
         hasSmartphone: true,
         hasWhatsApp: false,
@@ -64,11 +64,27 @@ export const DefaultStudents = [
         phone: 11368748731,
     },
     {
-        name: "Jorge Kino",
+        name: "Jorge Almeida",
         hasAddress: true,
         hasSmartphone: false,
         hasWhatsApp: false,
         hasWifi: false,
         phone: 11957893731,
+    },
+    {
+        name: "André Navarro",
+        hasAddress: true,
+        hasSmartphone: false,
+        hasWhatsApp: true,
+        hasWifi: false,
+        phone: 11957811231,
+    },
+    {
+        name: "Paula de Andrade",
+        hasAddress: true,
+        hasSmartphone: false,
+        hasWhatsApp: true,
+        hasWifi: false,
+        phone: 11957811231,
     }
   ]

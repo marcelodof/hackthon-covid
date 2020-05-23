@@ -18,4 +18,35 @@
     flex-direction: column;
     flex: 1;
     min-height: 60vh;
+    max-height: 70vh;
+    overflow: auto;
 }
+
+.students-container-list::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+
+.students-container-list::-webkit-scrollbar-thumb {
+    background: #000; 
+}
+
+/* styledScrollBar: {
+    '::-webkit-scrollbar': {
+      '-webkit-appearance': 'none',
+      borderLeftStyle: 'solid',
+      borderLeftWidth: 0,
+      width: '8px',
+    },
+    '::-webkit-scrollbar:hover': {
+      borderLeftWidth: '1px',
+      borderLeftColor: hexToRGBA(Colors.WHITE_TWO, 0.5),
+      backgroundColor: Colors.WHITE_THREE,
+    },
+    '::-webkit-scrollbar-thumb': {
+      borderRadius: 4,
+      backgroundColor: hexToRGBA(Colors.BLACK, 0.5),
+      boxShadow: `0 0 1px ${hexToRGBA(Colors.WHITE, 0.5)}`,
+    },
+  }, */

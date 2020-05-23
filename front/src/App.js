@@ -25,8 +25,8 @@ const defaultStudents = [
       name: "Paulo de Paula",
       hasAddress: true,
       hasSmartphone: true,
-      hasWhatsApp: true,
-      hasWifi: true,
+      hasWhatsApp: false,
+      hasWifi: false,
     },
     {
       name: "Matheus Ishimoto",
@@ -41,48 +41,38 @@ const defaultStudents = [
       hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: true,
+    },
+    {
+      name: "Bruno Albertini",
+      hasAddress: false,
+      hasSmartphone: false,
+      hasWhatsApp: false,
+      hasWifi: false,
     }
   ]
 
 function App() {
 
-  const [ studentsList, setStudentsList ] = 
-    useState(defaultStudents)
-  const [ appliedFilters, setAppliedFilters] =
-    useState({
-      hasAddress: false,
-      hasSmartphone: false,
-      hasWhatsApp: false,
-      hasWifi: false,
-    })
+    const [ studentsList, setStudentsList ] = useState(defaultStudents)
+    //const possibleFilter = ["notSmartphone", "hasSmartphone", "hasWhatsApp", "hasWifi"]
 
-  const applyFilters = (field) => {
-    setAppliedFilters({...appliedFilters, field: true})
-    setStudentsList(studentsList.filter((student) => {
-        return student[field]
+    const [activeFilter, setActiveFilter] = useState(null);
+
+  
+
+  const filterStudents = (filter) => {
+    setStudentsList(defaultStudents.filter((student) => {
+      if (filter === "notSmartphone") {
+        return !student["hasSmartphone"] && student["hasAddress"];
+      } else if (filter === "hasSmartphone") {
+        return student[filter] && !student["hasWhatsApp"];
+      } else if (filter === "hasWhatsApp") {
+        return student[filter] && student["hasSmartphone"];
+      } else if (filter === "hasWifi") {
+        return student[filter] && student["hasSmartphone"]
+      }
     }))
-  }
-
-  const removeFilters = (field) => {
-    // Getting filter keys   
-    const filtersToApply = Object.keys(appliedFilters)
-        .filter((key) => {
-            return appliedFilters[key] && field !== key
-        })
-    
-    
-    // filtersToApply.forEach(() => {
-    //     newFilteredStudents = defaultStudents.filter((student) => {
-    //         return student[appliedFilters]
-    //     })
-    // })
-
-    setAppliedFilters({...appliedFilters, field: false})
-    
-  }
-
-  const filterStudents = (field) => {
-    appliedFilters[field] ? removeFilters(field) : applyFilters(field)
+    setActiveFilter(filter);
   }
 
   

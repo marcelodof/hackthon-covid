@@ -5,6 +5,7 @@ import { StudentsContainer } from '../StudentsContainer/StudentsContainer'
 import { TaskModal } from '../TaskModal/TaskModal';
 
 import './StudentsFilter.css';
+import { NumberOfStudents } from '../NumberOfStudents/NumberOfStudents';
 
 export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, activeFilter}) => {
 
@@ -13,6 +14,8 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen)
     }
+
+    const metricsText = `${studentsMetrics.studentsCount} alunos, que representa ${studentsMetrics.studentsPercentage}%`
 
     return (
         <div>
@@ -33,17 +36,7 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                 </div>
                 <div className='filter-content'>
                     <StudentsContainer studentsList={studentsList}>
-                        {activeFilter
-                        ? <div className='filter-content-bottom'>
-                            <div className='students-metrics'>
-                                {studentsMetrics.studentsCount} - {studentsMetrics.studentsPercentage}%
-                            </div>
-                            <div className='modal-button' onClick={(activeFilter) => toggleModal(activeFilter)}>
-                                Enviar Tarefa
-                            </div>
-                        </div>
-                        : <div></div>
-                        }
+                        {activeFilter && <NumberOfStudents metricsText={metricsText} actionText={"Enviar Tarefa"} toggleModal={toggleModal} />}
                     </StudentsContainer>
                 </div>
             </div>

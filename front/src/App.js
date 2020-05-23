@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Navbar } from './Components/Navbar/Navbar';
 import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer';
 import { StudentsFilter } from './Components/StudentsFilter/StudentsFilter';
+import { NumberOfStudents } from './Components/NumberOfStudents/NumberOfStudents'
 
 import './App.css';
 
@@ -58,7 +59,7 @@ function App() {
 
     const [activeFilter, setActiveFilter] = useState(null);
 
-    const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:null, studentsPercentage:null});
+    const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:studentsList.length, studentsPercentage:'100%'});
 
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
@@ -71,6 +72,8 @@ function App() {
           return student[filter] && student["hasSmartphone"];
         case "hasWifi":
           return student[filter] && student["hasSmartphone"]
+        default:
+          return null;
       }
     })
     const studentsPercentage = (filteredStudents.length/defaultStudents.length).toFixed(2)*100
@@ -79,12 +82,16 @@ function App() {
     setStudentsList(filteredStudents)
     setActiveFilter(filter);
   }
+
+  const metricsText = `${studentsList.length} aluno - 100%`
   
   return (
     <div className="App">
       <Navbar />
       <div className="content-container">
-        <StudentsContainer studentsList={defaultStudents} />
+        <StudentsContainer studentsList={defaultStudents}>
+          <NumberOfStudents metricsText={metricsText} />
+        </StudentsContainer>
         <StudentsFilter 
           handleFilter={filterStudents} 
           studentsList={studentsList}

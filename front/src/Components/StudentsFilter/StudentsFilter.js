@@ -15,7 +15,7 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
         setIsModalOpen(!isModalOpen)
     }
 
-    const metricsText = `${studentsMetrics.studentsCount} alunos, que representa ${studentsMetrics.studentsPercentage}%`
+    const metricsText = `${studentsMetrics.studentsCount} aluno${studentsMetrics.studentsCount !== 1 ? 's' : ''}, que representa ${studentsMetrics.studentsPercentage}%`
 
     return (
         <div>
@@ -35,7 +35,9 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                     </div>
                 </div>
                 <div className='filter-content'>
-                    <StudentsContainer studentsList={studentsList}>
+                    <StudentsContainer
+                        studentsList={studentsList}
+                        showPhone={false}>
                         {activeFilter && <NumberOfStudents metricsText={metricsText} actionText={"Enviar Tarefa"} toggleModal={toggleModal} />}
                     </StudentsContainer>
                 </div>
@@ -44,7 +46,8 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                 isOpen={isModalOpen}>
                 <TaskModal 
                     toggleModal={toggleModal}
-                    activeFilter={activeFilter}/>
+                    activeFilter={activeFilter}
+                    studentsList={studentsList}/>
             </Modal>
         </div>
     )

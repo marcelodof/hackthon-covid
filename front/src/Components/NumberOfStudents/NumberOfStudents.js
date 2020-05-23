@@ -15,6 +15,6 @@ export const NumberOfStudents = ({metricsText, actionText, toggleModal}) => {
                 {actionText}
             </div>
             }
-            </div>
+        </div>
     )
 }

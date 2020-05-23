@@ -14,6 +14,7 @@ const defaultStudents = [
       hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: false,
+      phone: 11987347656,
     },
     {
       name: "Marcelo Dias",
@@ -21,6 +22,7 @@ const defaultStudents = [
       hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: true,
+      phone: 11987340986,
     },
     {
       name: "Paulo de Paula",
@@ -28,6 +30,7 @@ const defaultStudents = [
       hasSmartphone: true,
       hasWhatsApp: false,
       hasWifi: false,
+      phone: 11987334897,
     },
     {
       name: "Matheus Ishimoto",
@@ -35,6 +38,7 @@ const defaultStudents = [
       hasSmartphone: false,
       hasWhatsApp: false,
       hasWifi: false,
+      phone: 11954879990,
     },
     {
       name: "Gabriel Pera",
@@ -42,6 +46,7 @@ const defaultStudents = [
       hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: true,
+      phone: 11987378945,
     },
     {
       name: "Bruno Albertini",
@@ -49,6 +54,7 @@ const defaultStudents = [
       hasSmartphone: false,
       hasWhatsApp: false,
       hasWifi: false,
+      phone: 11955568731,
     }
   ]
 
@@ -83,13 +89,15 @@ function App() {
     setActiveFilter(filter);
   }
 
-  const metricsText = `${studentsList.length} aluno - 100%`
+  const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''}`
   
   return (
     <div className="App">
       <Navbar />
       <div className="content-container">
-        <StudentsContainer studentsList={defaultStudents}>
+        <StudentsContainer 
+          studentsList={defaultStudents}
+          showPhone={false}>
           <NumberOfStudents metricsText={metricsText} />
         </StudentsContainer>
         <StudentsFilter 

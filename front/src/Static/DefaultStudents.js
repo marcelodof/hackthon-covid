@@ -96,6 +96,6 @@ export const DefaultStudents = [
         hasWhatsApp: true,
         hasWifi: false,
         phone: 11957811231,
-        homeworkHasBeenSent: true,
+        homeworkHasBeenSent: false,
     }
   ]

@@ -88,7 +88,8 @@ function App() {
         <StudentsFilter 
           handleFilter={filterStudents} 
           studentsList={studentsList}
-          studentsMetrics={filteredStudentsMetrics} />
+          studentsMetrics={filteredStudentsMetrics} 
+          activeFilter={activeFilter} />
       </div>
     </div>
   );

@@ -1,0 +1,21 @@
+.preview-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.students-preview {
+    width: 50vw;
+}
+
+
+.whatsapp-background {
+    background: url("https://i.ibb.co/3s1f9Jq/default-wallpaper.png") repeat;
+    width: 400px;
+    height: 100vh;
+    padding-right: 8px;
+    z-index: 0;
+    margin-right: 32px;
+    max-height: 350px;
+}

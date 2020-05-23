@@ -18,7 +18,7 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
     const metricsText = `${studentsMetrics.studentsCount} aluno${studentsMetrics.studentsCount !== 1 ? 's' : ''}, que representa ${studentsMetrics.studentsPercentage}%`
 
     return (
-        <div>
+        <React.Fragment>
             <div className='filter-wrapper'>
                 <div className='filter-buttons'>
                     <div className='button' onClick={() => handleFilter("notSmartphone")}>
@@ -37,6 +37,7 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                 <div className='filter-content'>
                     <StudentsContainer
                         studentsList={studentsList}
+                        hasShadow
                         showPhone={false}>
                         {activeFilter && <NumberOfStudents metricsText={metricsText} actionText={"Enviar Tarefa"} toggleModal={toggleModal} />}
                     </StudentsContainer>
@@ -49,6 +50,6 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                     activeFilter={activeFilter}
                     studentsList={studentsList}/>
             </Modal>
-        </div>
+        </React.Fragment>
     )
 }

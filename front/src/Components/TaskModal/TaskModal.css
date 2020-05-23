@@ -25,3 +25,12 @@
     display: flex;
     flex-direction: row;
 }
+
+.form-input {
+    background-color: #e7eff6;
+    padding: 16px;
+    border: 1px solid #e7eff6;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+}

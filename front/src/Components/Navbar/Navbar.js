@@ -16,8 +16,11 @@ export const Navbar = () => {
                     Turma A
                 </div>
             </div>
+            <div className='tittle'>
+                Salva Prof
+            </div>
             <div className="teacher-avatar">
-                    <FaUserCircle />
+                <FaUserCircle />
             </div>
 
         </div>

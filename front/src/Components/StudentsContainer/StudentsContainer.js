@@ -4,7 +4,7 @@ import { StudentItem } from '../StudentItem/StudentItem';
 
 import './StudentsContainer.css'
 
-export const StudentsContainer = ({studentsList}) => {
+export const StudentsContainer = ({studentsList, studentsMetrics}) => {
     return (
         <div className="students-container">
             {
@@ -17,7 +17,13 @@ export const StudentsContainer = ({studentsList}) => {
                             hasWifi={student.hasWifi}
                             />
                 })
-            }            
+            }
+            <div className="students-metrics">
+                {
+                    studentsMetrics
+                }
+                %
+            </div>
         </div>
     )
 }

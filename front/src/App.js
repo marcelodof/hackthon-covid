@@ -58,29 +58,33 @@ function App() {
 
     const [activeFilter, setActiveFilter] = useState(null);
 
-  
+    const [filteredStudentsPercentage, setFilteredStudentsPercentage] = useState(100);
 
   const filterStudents = (filter) => {
-    setStudentsList(defaultStudents.filter((student) => {
-      if (filter === "notSmartphone") {
-        return !student["hasSmartphone"] && student["hasAddress"];
-      } else if (filter === "hasSmartphone") {
-        return student[filter] && !student["hasWhatsApp"];
-      } else if (filter === "hasWhatsApp") {
-        return student[filter] && student["hasSmartphone"];
-      } else if (filter === "hasWifi") {
-        return student[filter] && student["hasSmartphone"]
+    const filteredStudents = defaultStudents.filter((student) => {
+      switch (filter) {
+        case "notSmartphone":
+          return !student["hasSmartphone"] && student["hasAddress"];
+        case "hasSmartphone":
+          return student[filter] && !student["hasWhatsApp"];
+        case "hasWhatsApp":
+          return student[filter] && student["hasSmartphone"];
+        case "hasWifi":
+          return student[filter] && student["hasSmartphone"]
       }
-    }))
+    })
+    const percentage = (filteredStudents.length/defaultStudents.length).toFixed(2)*100
+    //const studentsCount = filteredStudents.length
+    setStudentsList(filteredStudents)
+    setFilteredStudentsPercentage(percentage)
     setActiveFilter(filter);
   }
-
   
   return (
     <div className="App">
       <Navbar />
       <div className="content-container">
-        <StudentsContainer studentsList={studentsList} />
+        <StudentsContainer studentsList={studentsList} studentsMetrics={filteredStudentsPercentage}/>
         <StudentsFilter handleFilter={filterStudents}/>
       </div>
     </div>

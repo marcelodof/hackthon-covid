@@ -67,5 +67,6 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
                              deadline={deadline}
                              additionalInfo={additionalInfo}
                              duration={duration}
+                             studentsList={studentsList}
                              />)
     }

@@ -18,6 +18,8 @@ function App() {
 
     const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:studentsList.length, studentsPercentage:'100%'});
 
+    const [allStudentsList, setAllStudentsList] = useState(defaultStudents);
+
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
       switch (filter) {
@@ -26,9 +28,9 @@ function App() {
         case "hasSmartphone":
           return student[filter] && !student["hasWhatsApp"];
         case "hasWhatsApp":
-          return student[filter] && student["hasSmartphone"];
+          return student[filter] && !student["hasWifi"];
         case "hasWifi":
-          return student[filter] && student["hasSmartphone"]
+          return student[filter] //&& student["hasSmartphone"]
         default:
           return null;
       }

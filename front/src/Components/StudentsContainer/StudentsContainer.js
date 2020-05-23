@@ -18,6 +18,7 @@ export const StudentsContainer = ({studentsList, showPhone, children, hasShadow}
                                 hasWifi={student.hasWifi}
                                 phone={student.phone}
                                 showPhone={showPhone}
+                                homeworkHasBeenSent={student.homeworkHasBeenSent}
                                 />
                     })
                 }

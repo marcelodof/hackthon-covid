@@ -7,9 +7,9 @@ import { AiFillPhone } from 'react-icons/ai';
 
 import './StudentItem.css';
 
-export const StudentItem = ({name, hasAddress, hasSmartphone, hasWhatsApp, hasWifi, phone, showPhone}) => {
+export const StudentItem = ({name, hasAddress, hasSmartphone, hasWhatsApp, hasWifi, phone, showPhone, homeworkHasBeenSent}) => {
     return (
-        <div className="item-container">
+        <div className={`item-container ${homeworkHasBeenSent? 'sent' : null}`}>
             <div className="student-name">
                 {name}
             </div>

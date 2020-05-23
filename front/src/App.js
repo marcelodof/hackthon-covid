@@ -26,9 +26,9 @@ function App() {
         case "hasSmartphone":
           return student[filter] && !student["hasWhatsApp"];
         case "hasWhatsApp":
-          return student[filter] && student["hasSmartphone"];
+          return student[filter] && !student["hasWifi"];
         case "hasWifi":
-          return student[filter] && student["hasSmartphone"]
+          return student[filter] //&& student["hasSmartphone"]
         default:
           return null;
       }

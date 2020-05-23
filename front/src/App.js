@@ -18,6 +18,8 @@ function App() {
 
     const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:studentsList.length, studentsPercentage:'100%'});
 
+    const [allStudentsList, setAllStudentsList] = useState(defaultStudents);
+
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
       switch (filter) {

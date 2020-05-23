@@ -6,6 +6,7 @@ export const DefaultStudents = [
       hasWhatsApp: true,
       hasWifi: false,
       phone: 11987347656,
+      homeworkHasBeenSent: false,
     },
     {
       name: "Marcelo Dias",
@@ -14,6 +15,7 @@ export const DefaultStudents = [
       hasWhatsApp: true,
       hasWifi: true,
       phone: 11987340986,
+      homeworkHasBeenSent: false,
     },
     {
       name: "Paulo de Paula",
@@ -22,6 +24,7 @@ export const DefaultStudents = [
       hasWhatsApp: false,
       hasWifi: false,
       phone: 11987334897,
+      homeworkHasBeenSent: false,
     },
     {
       name: "Matheus Ishimoto",
@@ -30,6 +33,7 @@ export const DefaultStudents = [
       hasWhatsApp: false,
       hasWifi: false,
       phone: 11954879990,
+      homeworkHasBeenSent: false,
     },
     {
       name: "Gabriel Pera",
@@ -38,6 +42,7 @@ export const DefaultStudents = [
       hasWhatsApp: true,
       hasWifi: true,
       phone: 11987378945,
+      homeworkHasBeenSent: false,
     },
     {
       name: "Beatriz Silva",
@@ -46,6 +51,7 @@ export const DefaultStudents = [
       hasWhatsApp: false,
       hasWifi: false,
       phone: 11955568731,
+      homeworkHasBeenSent: false,
     },
     {
         name: "Eduardo Tita",
@@ -54,6 +60,7 @@ export const DefaultStudents = [
         hasWhatsApp: true,
         hasWifi: true,
         phone: 1175868731,
+        homeworkHasBeenSent: false,
     },
     {
         name: "Maria Paula de Souza",
@@ -62,6 +69,7 @@ export const DefaultStudents = [
         hasWhatsApp: false,
         hasWifi: false,
         phone: 11368748731,
+        homeworkHasBeenSent: false,
     },
     {
         name: "Jorge Almeida",
@@ -70,21 +78,24 @@ export const DefaultStudents = [
         hasWhatsApp: false,
         hasWifi: false,
         phone: 11957893731,
+        homeworkHasBeenSent: false,
     },
     {
         name: "André Navarro",
         hasAddress: true,
-        hasSmartphone: false,
+        hasSmartphone: true,
         hasWhatsApp: true,
         hasWifi: false,
         phone: 11957811231,
+        homeworkHasBeenSent: false,
     },
     {
         name: "Paula de Andrade",
         hasAddress: true,
-        hasSmartphone: false,
+        hasSmartphone: true,
         hasWhatsApp: true,
         hasWifi: false,
         phone: 11957811231,
+        homeworkHasBeenSent: true,
     }
   ]

@@ -1,26 +1,42 @@
-import React from 'react';
-import { IoMdClose } from 'react-icons/io';
+import React, { useState } from 'react';
 
 import { StudentsContainer } from '../StudentsContainer/StudentsContainer';
 import { NumberOfStudents } from '../NumberOfStudents/NumberOfStudents';
 import { InputForm } from '../InputForm/InputForm';
+import { HomeworkPreview } from '../HomeworkPreview/HomeworkPreview';
+import { ModalHeader } from '../ModalHeader/ModalHeader';
 
 import './TaskModal.css'
 
 export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
+    const [topic, setTopic] = useState("");
+    const [deadline, setDeadline] = useState("");
+    const [duration, setDuration] = useState("");
+    const [addtionalInfo, setAddtionalInfo] = useState("");
+    const [homeworkSent, setHomeworkSent] = useState(false);
+
+    const handleTopicChange = (event) => {
+        setTopic(event.target.value)
+    }
+    const handleDeadlineChange = (event) => {
+        setDeadline(event.target.value)
+    }
+    const handleDurationChange = (event) => {
+        setDuration(event.target.value)
+    }
+    const handleAdditionalInfoChange = (event) => {
+        setAddtionalInfo(event.target.value)
+    }
+
+    const handleSeePreview = () => {
+        setHomeworkSent(true);
+    }
 
     const metricsText = `${studentsList.length} aluno${studentsList.length !== 1 ? 's' : ''}`
-    
-    return (
+
+    const homeworkInput = () => (
         <div className='modal-wrapper'>
-            <div className='modal-header'>
-                <div className='modal-tittle'>
-                    Enviar tarefx por WhatsApp
-                </div>
-                <div className='modal-back-button' onClick={() => toggleModal()}>
-                    <IoMdClose/>
-                </div>
-            </div>
+            <ModalHeader headerText={"Enviar tarefa via whatsapp"} toggleModal={toggleModal} />
             <div className='modal-form'>
                 <StudentsContainer
                     studentsList={studentsList}
@@ -28,9 +44,28 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
                     <NumberOfStudents metricsText={metricsText} />
                 </StudentsContainer>
                 <div className="input-form">
-                    <InputForm />
+                    <InputForm
+                        topic={topic}
+                        deadline={deadline}
+                        duration={duration}
+                        addtionalInfo={addtionalInfo}
+                        handleDeadlineChange={handleDeadlineChange}
+                        handleTopicChange={handleTopicChange}
+                        handleAdditionalInfoChange={handleAdditionalInfoChange}
+                        handleDurationChange={handleDurationChange}
+                        handleSeePreview={handleSeePreview}
+                    />
                 </div>
             </div>
         </div>
     )
-}
+    
+    return (!homeworkSent ? homeworkInput() : 
+            <HomeworkPreview toggleModal={toggleModal}
+                             headerText={"Podemos Enviar"}
+                             topic={topic}
+                             deadline={deadline}
+                             addtionalInfo={addtionalInfo}
+                             duration={duration}
+                             />)
+    }

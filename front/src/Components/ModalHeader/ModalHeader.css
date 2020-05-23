@@ -1,0 +1,16 @@
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-tittle {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.modal-back-button {
+    font-size: 32px;
+    cursor: pointer;
+}

@@ -1,27 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './InputForm.css'
 
 
-export const InputForm = () => {
-    const [topic, setTopic] = useState("");
-    const [deadline, setDeadline] = useState("");
-    const [duration, setDuration] = useState("");
-    const [addtionalInfo, setAddtionalInfo] = useState("");
-
-    const handleTopicChange = (event) => {
-        setTopic(event.target.value)
-    }
-    const handleDeadlineChange = (event) => {
-        setDeadline(event.target.value)
-    }
-    const handleDurationChange = (event) => {
-        setDuration(event.target.value)
-    }
-    const handleAdditionalInfoChange = (event) => {
-        setAddtionalInfo(event.target.value)
-    }
-
+export const InputForm = (
+    {topic,
+     deadline,
+     duration,
+     addtionalInfo,
+     handleAdditionalInfoChange,
+     handleDeadlineChange,
+     handleDurationChange,
+     handleTopicChange,
+     handleSeePreview}) => {
     return  (
         <div className="input-wrapper">
             <form>
@@ -49,8 +40,8 @@ export const InputForm = () => {
                     <label>Informações Adcionais</label><br/>
                     <textarea onChange={handleAdditionalInfoChange} value={addtionalInfo}></textarea>                          
                 </div>
-                <div className="submit-button">
-                    Enviar
+                <div className="submit-button" onClick={handleSeePreview}>
+                    Conferir o resumo
                 </div>
             </form>
         </div>

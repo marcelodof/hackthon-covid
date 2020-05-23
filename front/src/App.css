@@ -5,6 +5,7 @@
     max-width: 100vw;
     flex-direction: row;
     padding: 32px;
+    max-height: 100vh;
 }
 
 .App {
@@ -14,6 +15,8 @@
 }
 
 .all-students {
-    max-width: 70vw;
-    min-width: 50vw;
+    max-width: 45vw;
+    margin-right: 16px;
+    display: flex;
+    flex: 1;
 }

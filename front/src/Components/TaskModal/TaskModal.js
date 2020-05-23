@@ -12,7 +12,7 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
     const [topic, setTopic] = useState("");
     const [deadline, setDeadline] = useState("");
     const [duration, setDuration] = useState("");
-    const [addtionalInfo, setAddtionalInfo] = useState("");
+    const [additionalInfo, setAdditionalInfo] = useState("");
     const [homeworkSent, setHomeworkSent] = useState(false);
 
     const handleTopicChange = (event) => {
@@ -25,7 +25,7 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
         setDuration(event.target.value)
     }
     const handleAdditionalInfoChange = (event) => {
-        setAddtionalInfo(event.target.value)
+        setAdditionalInfo(event.target.value)
     }
 
     const handleSeePreview = () => {
@@ -48,7 +48,7 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
                         topic={topic}
                         deadline={deadline}
                         duration={duration}
-                        addtionalInfo={addtionalInfo}
+                        additionalInfo={additionalInfo}
                         handleDeadlineChange={handleDeadlineChange}
                         handleTopicChange={handleTopicChange}
                         handleAdditionalInfoChange={handleAdditionalInfoChange}
@@ -65,7 +65,7 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
                              headerText={"Podemos Enviar"}
                              topic={topic}
                              deadline={deadline}
-                             addtionalInfo={addtionalInfo}
+                             additionalInfo={additionalInfo}
                              duration={duration}
                              />)
     }

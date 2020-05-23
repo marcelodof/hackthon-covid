@@ -7,7 +7,7 @@ export const InputForm = (
     {topic,
      deadline,
      duration,
-     addtionalInfo,
+     additionalInfo,
      handleAdditionalInfoChange,
      handleDeadlineChange,
      handleDurationChange,
@@ -38,7 +38,7 @@ export const InputForm = (
                 </div>
                 <div className="form-input">
                     <label>Informações Adcionais</label><br/>
-                    <textarea onChange={handleAdditionalInfoChange} value={addtionalInfo}></textarea>                          
+                    <textarea onChange={handleAdditionalInfoChange} value={additionalInfo}></textarea>                          
                 </div>
                 <div className="submit-button" onClick={handleSeePreview}>
                     Conferir o resumo

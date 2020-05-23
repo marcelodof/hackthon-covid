@@ -1,6 +1,9 @@
 .students-container {
-    background-color: #C4C4C4;
+    background-color: #e7eff6;
     height: 600px;
     width: 500px;
-    padding: 16px
+    padding: 16px;
+    border: 1px solid #e7eff6;
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px 5px #888888;
 }

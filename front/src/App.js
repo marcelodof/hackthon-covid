@@ -95,11 +95,11 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="content-container">
-        <StudentsContainer 
-          studentsList={defaultStudents}
-          showPhone={false}>
-          <NumberOfStudents metricsText={metricsText} />
-        </StudentsContainer>
+        <div className="all-students">
+          <StudentsContainer studentsList={defaultStudents}>
+              <NumberOfStudents metricsText={metricsText} />  
+          </StudentsContainer>
+        </div>
         <StudentsFilter 
           handleFilter={filterStudents} 
           studentsList={studentsList}

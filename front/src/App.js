@@ -4,59 +4,10 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer';
 import { StudentsFilter } from './Components/StudentsFilter/StudentsFilter';
 import { NumberOfStudents } from './Components/NumberOfStudents/NumberOfStudents'
-
+import { DefaultStudents } from './Components/DefaultStudents'
 import './App.css';
 
-const defaultStudents = [ 
-    {
-      name: "Rafael Rahal",
-      hasAddress: false,
-      hasSmartphone: true,
-      hasWhatsApp: true,
-      hasWifi: false,
-      phone: 11987347656,
-    },
-    {
-      name: "Marcelo Dias",
-      hasAddress: true,
-      hasSmartphone: true,
-      hasWhatsApp: true,
-      hasWifi: true,
-      phone: 11987340986,
-    },
-    {
-      name: "Paulo de Paula",
-      hasAddress: true,
-      hasSmartphone: true,
-      hasWhatsApp: false,
-      hasWifi: false,
-      phone: 11987334897,
-    },
-    {
-      name: "Matheus Ishimoto",
-      hasAddress: true,
-      hasSmartphone: false,
-      hasWhatsApp: false,
-      hasWifi: false,
-      phone: 11954879990,
-    },
-    {
-      name: "Gabriel Pera",
-      hasAddress: true,
-      hasSmartphone: true,
-      hasWhatsApp: true,
-      hasWifi: true,
-      phone: 11987378945,
-    },
-    {
-      name: "Bruno Albertini",
-      hasAddress: false,
-      hasSmartphone: false,
-      hasWhatsApp: false,
-      hasWifi: false,
-      phone: 11955568731,
-    }
-  ]
+const defaultStudents = DefaultStudents
 
 function App() {
 

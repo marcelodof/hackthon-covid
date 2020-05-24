@@ -22,7 +22,7 @@ export const InputForm = (
                 </div>
                 <div className="form-input">
                     <label>Prazo</label><br/>
-                    <input className='text-input-box' type="text" onChange={handleDeadlineChange} value={deadline}></input>
+                    <input className='text-input-box' type="date" onChange={handleDeadlineChange} value={deadline}></input>
                 </div>
                 <div className="form-input">
                     <label>Duração</label><br/>

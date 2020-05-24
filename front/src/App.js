@@ -30,7 +30,7 @@ function App() {
         case "hasWhatsApp":
           return student[filter] && !student["hasWifi"];
         case "hasWifi":
-          return student[filter] //&& student["hasSmartphone"]
+          return student[filter]
         default:
           return null;
       }
@@ -41,6 +41,25 @@ function App() {
     setStudentsList(filteredStudents)
     setActiveFilter(filter);
   }
+
+  const filterHomeworkHasBeenSent = () => {
+    const newAllStudents = []
+    allStudentsList.forEach((student) => {
+        let found = false
+        studentsList.forEach((filteredStudent) => {
+            if (student.name === filteredStudent.name) {
+              filteredStudent.homeworkHasBeenSent = true
+              found = true
+              newAllStudents.push(filteredStudent)
+        }
+        })
+        if (!found){
+            newAllStudents.push(student)
+          }
+    })
+    setAllStudentsList(newAllStudents)
+    console.log(newAllStudents)
+}
 
   const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''}`
   
@@ -57,7 +76,8 @@ function App() {
           handleFilter={filterStudents} 
           studentsList={studentsList}
           studentsMetrics={filteredStudentsMetrics} 
-          activeFilter={activeFilter} />
+          activeFilter={activeFilter} 
+          homeworkHasBeenSent={filterHomeworkHasBeenSent}/>
       </div>
     </div>
   );

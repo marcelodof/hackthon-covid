@@ -31,22 +31,14 @@ export const InputForm = (
                     <label>Duração</label><br/>
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
-                <div className="form-input">
-                    <label>Teoria</label><br/>
-                    <input className="form-task-attachments" type="file" onChange={handleTheoryFile} />
-                </div>
-                <div className="form-input">
-                    <label>Exercício</label><br/>
-                    <input className="form-task-attachments" type="file" onChange={handleExerciseFile} />
-                </div>
                 {activeFilter === 'hasWhatsApp' && <>
                     <div className="form-input">
                         <label>Teoria</label><br/>
-                        <input className="form-task-attachments" type="file"></input>
+                        <input className="form-task-attachments" type="file" onChange={handleTheoryFile}></input>
                     </div>
                     <div className="form-input">
                         <label>Exercício</label><br/>
-                        <input className="form-task-attachments" type="file"></input>
+                        <input className="form-task-attachments" type="file" onChange={handleExerciseFile}></input>
                     </div>
                 </>}
                 {activeFilter === 'hasWifi' && <>

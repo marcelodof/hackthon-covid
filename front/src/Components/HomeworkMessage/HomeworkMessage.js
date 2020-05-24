@@ -18,7 +18,7 @@ export const HomeworkMessage = ({topic, duration, deadline, additionalInfo, theo
         <div className="whatsapp-balloon">
             <div>Olá, tudo bem? </div>
             <div>Viemos aqui entregar sua tarefa de Matemática. </div>
-            <div>Vamos as informações?  </div><br/>
+            <div>Vamos às informações?  </div><br/>
             <div>Professor(a): José da Silva </div> <br/>
             <div><span role='img' aria-label='book'>📖</span>Tópico: <strong> {topic}</strong></div> <br/>
             <div><span role='img' aria-label='duration'>⏳</span>Duração: <strong> {duration} </strong></div> <br/>

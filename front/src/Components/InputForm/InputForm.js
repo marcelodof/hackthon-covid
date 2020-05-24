@@ -28,7 +28,7 @@ export const InputForm = (
                     <input className='text-input-box' type="date" onChange={handleDeadlineChange} value={deadline}></input>
                 </div>
                 <div className="form-input">
-                    <label className="label">Duração</label><br/>
+                    <label className="label">Duração da atividade:</label><br/>
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
                 {activeFilter === 'hasWhatsApp' && <>
@@ -44,11 +44,11 @@ export const InputForm = (
                 {activeFilter === 'hasWifi' && <>
                     <div className="form-input">
                         <label className="label">Vídeo Aula</label><br/>
-                        <input className="form-task-attachments" type="file"></input>
+                        <input className="form-task-attachments" type="file" onChange={handleTheoryFile}/>
                     </div>
                     <div className="form-input">
                         <label className="label">Exercício</label><br/>
-                        <input className="form-task-attachments" type="file"></input>
+                        <input className="form-task-attachments" type="file" onChange={handleExerciseFile}/>
                     </div>
                 </>}
                 <div className="form-input">

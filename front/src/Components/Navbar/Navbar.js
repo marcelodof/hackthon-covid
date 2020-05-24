@@ -5,9 +5,10 @@ import { FaUserCircle } from 'react-icons/fa';
 import "./Navbar.css"
 
 
-export const Navbar = () => {
+export const Navbar = ({showClass}) => {
     return (
         <div className="navbar-wrapper">
+            {showClass ?
             <div className="group-container">
                 <div className="dropdown-button">
                     <GiHamburgerMenu />
@@ -15,14 +16,14 @@ export const Navbar = () => {
                 <div className="group-name">
                     Turma A
                 </div>
-            </div>
+            </div> : <div></div>}
             <div className='tittle'>
                 Salva Prof
             </div>
+            {showClass ?
             <div className="teacher-avatar">
                 <FaUserCircle />
-            </div>
-
+            </div> : <div></div>}
         </div>
     )
 }

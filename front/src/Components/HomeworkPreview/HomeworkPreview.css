@@ -25,7 +25,7 @@
 .submit-homework {
     display: flex;
     justify-content: center;
-    border: 1px solid #005b96;
+    border: 2px solid #011f4b;
     border-radius: 5px;
     padding: 8px;
     max-width: 250px;
@@ -40,9 +40,9 @@
 
 .whatsapp-background {
     background: url("https://i.ibb.co/3s1f9Jq/default-wallpaper.png") repeat;
-    width: 400px;
+    min-width: 45vw;
     height: auto;
     padding-right: 8px;
     z-index: 0;
-    margin-right: 32px;
+    margin-left: 32px;
 }

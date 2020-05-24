@@ -8,7 +8,7 @@ import { ModalHeader } from '../ModalHeader/ModalHeader';
 
 import './TaskModal.css'
 
-export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
+export const TaskModal = ({toggleModal, activeFilter, studentsList,homeworkHasBeenSent}) => {
     const [topic, setTopic] = useState("");
     const [deadline, setDeadline] = useState("");
     const [duration, setDuration] = useState("");
@@ -68,5 +68,6 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList}) => {
                              additionalInfo={additionalInfo}
                              duration={duration}
                              studentsList={studentsList}
+                             homeworkHasBeenSent={homeworkHasBeenSent}
                              />)
     }

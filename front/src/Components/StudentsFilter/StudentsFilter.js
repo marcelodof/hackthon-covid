@@ -7,7 +7,7 @@ import { TaskModal } from '../TaskModal/TaskModal';
 import './StudentsFilter.css';
 import { NumberOfStudents } from '../NumberOfStudents/NumberOfStudents';
 
-export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, activeFilter}) => {
+export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, activeFilter, homeworkHasBeenSent}) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -52,7 +52,8 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                 <TaskModal 
                     toggleModal={toggleModal}
                     activeFilter={activeFilter}
-                    studentsList={studentsList}/>
+                    studentsList={studentsList}
+                    homeworkHasBeenSent={homeworkHasBeenSent}/>
             </Modal>
         </React.Fragment>
     )

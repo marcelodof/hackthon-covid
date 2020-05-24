@@ -20,6 +20,8 @@ function App() {
 
     const [allStudentsList, setAllStudentsList] = useState(defaultStudents);
 
+    const [sentHomeworkPercentage, setSentHomeworkPercentage] = useState(null);
+
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
       switch (filter) {
@@ -58,7 +60,8 @@ function App() {
           }
     })
     setAllStudentsList(newAllStudents)
-    console.log(newAllStudents)
+    const sentHomeworkStudents = allStudentsList.filter((student) => student.homeworkHasBeenSent === true);
+    setSentHomeworkPercentage((sentHomeworkStudents.length/allStudentsList.length).toFixed(2)*100)
 }
 
   const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''}`

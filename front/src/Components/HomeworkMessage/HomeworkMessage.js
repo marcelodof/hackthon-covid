@@ -3,7 +3,7 @@ import { GrDocumentPdf } from 'react-icons/gr';
 
 import './HomeworkMessage.css'
 
-const transformData = (date) => {
+const transformDate = (date) => {
     const dateArray = date.split('-')
     return `${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`
 }
@@ -16,9 +16,9 @@ export const HomeworkMessage = ({topic, duration, deadline, additionalInfo, theo
             <div>Viemos aqui entregar sua tarefa de Matemática. </div>
             <div>Vamos as informações?  </div><br/>
             <div>Professor(a): José da Silva </div> <br/>
-            <div>Tópico: <strong> {topic}</strong></div> <br/>
-            <div>Duração: <strong> {duration} </strong></div> <br/>
-            <div><span role='img' aria-label='calendar'>📅</span>Data final para entrega: <strong> {transformData(deadline)} </strong></div> <br/>
+            <div><span role='img' aria-label='book'>📖</span>Tópico: <strong> {topic}</strong></div> <br/>
+            <div><span role='img' aria-label='duration'>⏳</span>Duração: <strong> {duration} </strong></div> <br/>
+            <div><span role='img' aria-label='calendar'>📅</span>Data final para entrega: <strong> {transformDate(deadline)} </strong></div> <br/>
             <div>Informações adicionais: <strong>{additionalInfo} </strong></div> <br/>
             <div>Envie suas atividades dentro do prazo. Ótimos estudos!</div>
         </div> 

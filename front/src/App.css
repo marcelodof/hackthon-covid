@@ -38,3 +38,8 @@
     background-color: #7f7f7f;
     box-shadow: 0px 0px 1px #FFFFFF;
 }
+
+.container-metrics {
+    display: flex;
+    flex-direction: row;
+}

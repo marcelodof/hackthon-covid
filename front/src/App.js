@@ -6,6 +6,7 @@ import { StudentsFilter } from './Components/StudentsFilter/StudentsFilter';
 import { NumberOfStudents } from './Components/NumberOfStudents/NumberOfStudents'
 import { ExerciseSent } from './Components/ExerciseSent/ExerciseSent'
 import { DefaultStudents } from './Static/DefaultStudents'
+import { ProgressBar } from './Components/ProgressBar/ProgressBar'
 import './App.css';
 
 const defaultStudents = DefaultStudents
@@ -21,7 +22,7 @@ function App() {
     const [allStudentsList, setAllStudentsList] = useState(defaultStudents);
     const [showSucessAlert, setShowSucessAlert] = useState(false);
 
-    const [sentHomeworkPercentage, setSentHomeworkPercentage] = useState(null);
+    const [sentHomeworkPercentage, setSentHomeworkPercentage] = useState(0);
 
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
@@ -79,7 +80,10 @@ function App() {
       <div className="content-container">
         <div className="all-students">
           <StudentsContainer studentsList={defaultStudents} hasShadow>
+            <div className="container-metrics">
               <NumberOfStudents metricsText={metricsText} />  
+              <ProgressBar percentage={sentHomeworkPercentage}/> 
+            </div>
           </StudentsContainer>
         </div>
         <StudentsFilter 

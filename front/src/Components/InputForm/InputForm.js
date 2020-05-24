@@ -28,13 +28,13 @@ export const InputForm = (
                     <label>Duração</label><br/>
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
-                <div className="form-task-attachments">
+                <div className="form-input">
                     <label>Exercício</label><br/>
-                    <input type="file"></input>
+                    <input className="form-task-attachments" type="file"></input>
                 </div>
-                <div className="form-task-attachments">
+                <div className="form-input">
                     <label>Gabarito</label><br/>
-                    <input type="file"></input>
+                    <input className="form-task-attachments" type="file"></input>
                 </div>
                 <div className="form-input">
                     <label>Informações Adicionais</label><br/>

@@ -1,13 +1,27 @@
 .progressbar {
-    background-color: black;
+    border: 1px solid black;
     border-radius: 13px;
     width: 90%;
     height: 20px;
-    padding: 3px;
+    padding: 2px;
+    margin-top: 8px;
+
 }
   
 .progressbar-completed {
-background-color: orange;
-height: 20px;
-border-radius: 10px;
+    background-color: #3b5998;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.progress-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;    
+}
+
+.progress-bar-text {
+    font-size: 14px;
 }

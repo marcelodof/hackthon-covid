@@ -44,11 +44,11 @@ export const InputForm = (
                 {activeFilter === 'hasWifi' && <>
                     <div className="form-input">
                         <label className="label">Vídeo Aula</label><br/>
-                        <input className="form-task-attachments" type="file"></input>
+                        <input className="form-task-attachments" type="file" onChange={handleTheoryFile}/>
                     </div>
                     <div className="form-input">
                         <label className="label">Exercício</label><br/>
-                        <input className="form-task-attachments" type="file"></input>
+                        <input className="form-task-attachments" type="file" onChange={handleExerciseFile}/>
                     </div>
                 </>}
                 <div className="form-input">

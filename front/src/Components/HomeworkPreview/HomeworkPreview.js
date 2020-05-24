@@ -10,17 +10,19 @@ export const HomeworkPreview = ({toggleModal, headerText, topic, deadline, durat
     return (
     <React.Fragment>
         <ModalHeader toggleModal={toggleModal} headerText={headerText} />
-        <div className="preview-wrapper">
-            <div className="whatsapp-background">
-                <div className="message-container">
-                    <HomeworkMessage topic={topic} deadline={deadline} duration={duration} additionalInfo={additionalInfo} />
+    <div className="preview-wrapper">
+            <div className="content-wrapper">
+                <div className="whatsapp-background">
+                    <div className="message-container">
+                        <HomeworkMessage topic={topic} deadline={deadline} duration={duration} additionalInfo={additionalInfo} />
+                    </div>
+                </div>
+                <div className="students-preview">
+                    <StudentsContainer studentsList={studentsList} showPhone={true} />
                 </div>
             </div>
-            <div className="students-preview">
-                <StudentsContainer studentsList={studentsList} showPhone={true} />
-            </div>
-            <div onClick={homeworkHasBeenSent}>
-                Botão de enviar
+            <div onClick={homeworkHasBeenSent} className="submit-button">
+                Enviar Atividade
             </div>
         </div>
     </React.Fragment>

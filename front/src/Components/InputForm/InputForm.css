@@ -39,6 +39,7 @@
     max-width: 150px;
     background-color: #005b96;
     color: white;
+    cursor: pointer;
 }
 
 .textarea-form {

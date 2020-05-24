@@ -1,5 +1,10 @@
 .preview-wrapper {
     display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 32px;
@@ -7,6 +12,18 @@
 
 .students-preview {
     width: 50vw;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #005b96;
+    border-radius: 5px;
+    padding: 8px;
+    max-width: 150px;
+    background-color: #005b96;
+    color: white;
+    cursor: pointer;
 }
 
 

@@ -22,6 +22,7 @@
 }
 
 ::-webkit-scrollbar {
+    background: transparent;
     border-left-style: 'solid';
     border-left-width: 0px;
     width: 8px;
@@ -37,4 +38,9 @@
     border-radius: 4px;
     background-color: #7f7f7f;
     box-shadow: 0px 0px 1px #FFFFFF;
+}
+
+.container-metrics {
+    display: flex;
+    flex-direction: row;
 }

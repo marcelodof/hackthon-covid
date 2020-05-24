@@ -46,7 +46,6 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     
     return (!homeworkSent
             ? <HomeworkInput toggleModal={toggleModal}
-                             headerText={"Enviar atividade por WhatsApp"}
                              topic={topic}
                              deadline={deadline}
                              duration={duration}

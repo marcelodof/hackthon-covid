@@ -13,7 +13,6 @@ const defaultStudents = DefaultStudents
 function App() {
 
     const [ studentsList, setStudentsList ] = useState(defaultStudents)
-    //const possibleFilter = ["notSmartphone", "hasSmartphone", "hasWhatsApp", "hasWifi"]
 
     const [activeFilter, setActiveFilter] = useState(null);
 
@@ -27,9 +26,9 @@ function App() {
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
       switch (filter) {
-        case "notSmartphone":
-          return !student["hasSmartphone"] && student["hasAddress"];
-        case "hasSmartphone":
+        case "notAddress":
+          return !student["hasAddress"];
+        case "hasAddress":
           return student[filter] && !student["hasWhatsApp"];
         case "hasWhatsApp":
           return student[filter] && !student["hasWifi"];

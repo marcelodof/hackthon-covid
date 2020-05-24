@@ -21,13 +21,13 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
         <React.Fragment>
             <div className='filter-wrapper'>
                 <div className='filter-buttons'>
-                    <div className={`button ${activeFilter === 'notSmartphone' ? 'pressed' : null}`} 
-                         onClick={() => handleFilter("notSmartphone")}>
-                        Material Físico + Entregue em Casa
-                    </div>
-                    <div className={`button ${activeFilter === 'hasSmartphone' ? 'pressed' : null}`} 
-                         onClick={() => handleFilter('hasSmartphone')}>
+                    <div className={`button ${activeFilter === 'notAddress' ? 'pressed' : null}`} 
+                         onClick={() => handleFilter("notAddress")}>
                         Material Físico + Buscar na Escola
+                    </div>
+                    <div className={`button ${activeFilter === 'hasAddress' ? 'pressed' : null}`} 
+                         onClick={() => handleFilter('hasAddress')}>
+                        Material Físico + Entregue em Casa
                     </div>  
                     <div className={`button ${activeFilter === 'hasWhatsApp' ? 'pressed' : null}`} 
                          onClick={() => handleFilter('hasWhatsApp')}>

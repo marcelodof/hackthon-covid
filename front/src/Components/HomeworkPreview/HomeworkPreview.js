@@ -6,7 +6,7 @@ import { HomeworkMessage } from '../HomeworkMessage/HomeworkMessage';
 
 import './HomeworkPreview.css';
 
-export const HomeworkPreview = ({toggleModal, headerText, topic, deadline, duration, additionalInfo, studentsList}) => { 
+export const HomeworkPreview = ({toggleModal, headerText, topic, deadline, duration, additionalInfo, studentsList, homeworkHasBeenSent}) => { 
     return (
     <React.Fragment>
         <ModalHeader toggleModal={toggleModal} headerText={headerText} />
@@ -18,6 +18,9 @@ export const HomeworkPreview = ({toggleModal, headerText, topic, deadline, durat
             </div>
             <div className="students-preview">
                 <StudentsContainer studentsList={studentsList} showPhone={true} />
+            </div>
+            <div onClick={homeworkHasBeenSent}>
+                Botão de enviar
             </div>
         </div>
     </React.Fragment>

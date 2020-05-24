@@ -12,6 +12,11 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     const [additionalInfo, setAdditionalInfo] = useState("");
     const [homeworkSent, setHomeworkSent] = useState(false);
 
+    const handleHomeworkSent = () => {
+        homeworkHasBeenSent();
+        toggleModal();
+    }
+
     const handleTopicChange = (event) => {
         setTopic(event.target.value)
     }
@@ -50,6 +55,6 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
                                additionalInfo={additionalInfo}
                                duration={duration}
                                studentsList={studentsList}
-                               homeworkHasBeenSent={homeworkHasBeenSent}
+                               homeworkHasBeenSent={handleHomeworkSent}
                                />)
     }

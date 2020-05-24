@@ -4,6 +4,7 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { StudentsContainer } from './Components/StudentsContainer/StudentsContainer';
 import { StudentsFilter } from './Components/StudentsFilter/StudentsFilter';
 import { NumberOfStudents } from './Components/NumberOfStudents/NumberOfStudents'
+import { ExerciseSent } from './Components/ExerciseSent/ExerciseSent'
 import { DefaultStudents } from './Static/DefaultStudents'
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
     const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:studentsList.length, studentsPercentage:'100%'});
 
     const [allStudentsList, setAllStudentsList] = useState(defaultStudents);
+    const [showSucessAlert, setShowSucessAlert] = useState(false);
 
     const [sentHomeworkPercentage, setSentHomeworkPercentage] = useState(null);
 
@@ -44,12 +46,16 @@ function App() {
     setActiveFilter(filter);
   }
 
+  const dismissAlert = () => {
+    setShowSucessAlert(false);
+  }
+
   const filterHomeworkHasBeenSent = () => {
     const newAllStudents = []
     allStudentsList.forEach((student) => {
         let found = false
         studentsList.forEach((filteredStudent) => {
-            if (student.name == filteredStudent.name) {
+            if (student.name === filteredStudent.name) {
               filteredStudent.homeworkHasBeenSent = true
               found = true
               newAllStudents.push(filteredStudent)
@@ -62,13 +68,15 @@ function App() {
     setAllStudentsList(newAllStudents)
     const sentHomeworkStudents = allStudentsList.filter((student) => student.homeworkHasBeenSent === true);
     setSentHomeworkPercentage((sentHomeworkStudents.length/allStudentsList.length).toFixed(2)*100)
-}
+    setShowSucessAlert(true);
+  }
 
   const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''}`
   
   return (
     <div className="App">
       <Navbar />
+      {showSucessAlert && <ExerciseSent handleDismissClick={dismissAlert} shouldShowAlert={showSucessAlert} /> }
       <div className="content-container">
         <div className="all-students">
           <StudentsContainer studentsList={defaultStudents} hasShadow>

@@ -22,19 +22,19 @@ export const InputForm = (
                 </div>
                 <div className="form-input">
                     <label>Prazo</label><br/>
-                    <input className='text-input-box' type="text" onChange={handleDeadlineChange} value={deadline}></input>
+                    <input className='text-input-box' type="date" onChange={handleDeadlineChange} value={deadline}></input>
                 </div>
                 <div className="form-input">
                     <label>Duração</label><br/>
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
-                <div className="form-task-attachments">
-                    <label>Exercício</label><br/>
-                    <input type="file"></input>
+                <div className="form-input">
+                    <label>Teoria</label><br/>
+                    <input className="form-task-attachments" type="file"></input>
                 </div>
-                <div className="form-task-attachments">
-                    <label>Gabarito</label><br/>
-                    <input type="file"></input>
+                <div className="form-input">
+                    <label>Exercício</label><br/>
+                    <input className="form-task-attachments" type="file"></input>
                 </div>
                 <div className="form-input">
                     <label>Informações Adicionais</label><br/>

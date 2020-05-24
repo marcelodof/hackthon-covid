@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IoMdClose } from 'react-icons/io';
 
 import "./ExerciseSent.css"
 
-export const ExerciseSent = () => {
-    const [shouldShowAlert, setShouldShotAlert] = useState(true)
-    const handleDismissClick = () => {
-        setShouldShotAlert(false)
-    }
+export const ExerciseSent = ({shouldShowAlert, handleDismissClick}) => {
 
     return (
         shouldShowAlert &&

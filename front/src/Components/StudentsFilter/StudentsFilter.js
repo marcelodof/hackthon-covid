@@ -48,7 +48,8 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
                 </div>
             </div>
             <Modal
-                isOpen={isModalOpen}>
+                isOpen={isModalOpen}
+                ariaHideApp={false}>
                 <TaskModal 
                     toggleModal={toggleModal}
                     activeFilter={activeFilter}

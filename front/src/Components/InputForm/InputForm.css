@@ -1,4 +1,4 @@
-z.form-input {
+.form-input {
     margin-bottom: 16px;
 }
 
@@ -26,8 +26,27 @@ z.form-input {
     flex: 1;
 }
 
+/* .form-task-attachments::before {
+    content: 'Escolha um arquivo';
+} */
+
 .form-task-attachments {
-    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    width: 30vw;
+    height: 2vw;
+    font-size: 12px;
+    /* padding: 2px; */
+}
+
+.form-task-attachments::-webkit-file-upload-button {
+    border: none;
+    background-color: #005b96;
+    font-size: 18px;
+    color: white;
+    height: inherit;
+    cursor: pointer;
 }
 
 .submit-button {

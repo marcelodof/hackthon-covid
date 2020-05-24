@@ -28,7 +28,7 @@ export const InputForm = (
                     <input className='text-input-box' type="date" onChange={handleDeadlineChange} value={deadline}></input>
                 </div>
                 <div className="form-input">
-                    <label className="label">Duração</label><br/>
+                    <label className="label">Duração da atividade:</label><br/>
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
                 {activeFilter === 'hasWhatsApp' && <>

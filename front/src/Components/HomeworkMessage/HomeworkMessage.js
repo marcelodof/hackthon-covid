@@ -21,7 +21,7 @@ export const HomeworkMessage = ({topic, duration, deadline, additionalInfo, theo
             <div>Vamos às informações?  </div><br/>
             <div>Professor(a): José da Silva </div> <br/>
             <div><span role='img' aria-label='book'>📖</span>Tópico: <strong> {topic}</strong></div> <br/>
-            <div><span role='img' aria-label='duration'>⏳</span>Duração: <strong> {duration} </strong></div> <br/>
+            <div><span role='img' aria-label='duration'>⏳</span>Duração da atividade: <strong> {duration} </strong></div> <br/>
             <div><span role='img' aria-label='calendar'>📅</span>Data final para entrega: <strong> {transformDate(deadline)} </strong></div> <br/>
             <div>Informações adicionais: <strong>{additionalInfo} </strong></div> <br/>
             <div>Envie suas atividades dentro do prazo. Ótimos estudos!</div>

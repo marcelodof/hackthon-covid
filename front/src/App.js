@@ -13,16 +13,19 @@ const defaultStudents = DefaultStudents
 
 function App() {
 
-    const [ studentsList, setStudentsList ] = useState(defaultStudents)
+    const [studentsList, setStudentsList] = useState(defaultStudents)
 
     const [activeFilter, setActiveFilter] = useState(null);
 
     const [filteredStudentsMetrics, setFilteredStudentsMetrics] = useState({studentsCount:studentsList.length, studentsPercentage:'100%'});
 
     const [allStudentsList, setAllStudentsList] = useState(defaultStudents);
+
     const [showSucessAlert, setShowSucessAlert] = useState(false);
 
     const [sentHomeworkPercentage, setSentHomeworkPercentage] = useState(0);
+
+    const [showFrontPage, setShowFrontPage] = useState(false);
 
   const filterStudents = (filter) => {
     const filteredStudents = defaultStudents.filter((student) => {
@@ -71,28 +74,49 @@ function App() {
     setShowSucessAlert(true);
   }
 
+  const handleShowFrontPage = () => {
+    setShowFrontPage(true)
+  }
+
   const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''} na turma`
   
   return (
     <div className="App">
-      <Navbar />
-      {showSucessAlert && <ExerciseSent handleDismissClick={dismissAlert} shouldShowAlert={showSucessAlert} /> }
-      <div className="content-container">
-        <div className="all-students">
-          <StudentsContainer studentsList={defaultStudents} hasShadow>
-            <div className="container-metrics">
-              <NumberOfStudents metricsText={metricsText} />  
-              <ProgressBar percentage={sentHomeworkPercentage}/> 
-            </div>
-          </StudentsContainer>
+      {showFrontPage
+      ? <>
+        <Navbar showClass={true}/>
+        {showSucessAlert && <ExerciseSent handleDismissClick={dismissAlert} shouldShowAlert={showSucessAlert} /> }
+        <div className="content-container">
+            <div className="all-students">
+            <StudentsContainer studentsList={defaultStudents} hasShadow>
+              <div className="container-metrics">
+                <NumberOfStudents metricsText={metricsText} />  
+                <ProgressBar percentage={sentHomeworkPercentage}/> 
+              </div>
+            </StudentsContainer>
+          </div>
+          <StudentsFilter 
+            handleFilter={filterStudents} 
+            studentsList={studentsList}
+            studentsMetrics={filteredStudentsMetrics} 
+            activeFilter={activeFilter} 
+            homeworkHasBeenSent={filterHomeworkHasBeenSent}/>
         </div>
-        <StudentsFilter 
-          handleFilter={filterStudents} 
-          studentsList={studentsList}
-          studentsMetrics={filteredStudentsMetrics} 
-          activeFilter={activeFilter} 
-          homeworkHasBeenSent={filterHomeworkHasBeenSent}/>
-      </div>
+      </>
+      : <>
+        <Navbar showClass={false}/>
+        <div className='start-container'>
+          <form className='start-form'>
+            <label>Login</label>
+            <input type='text'></input>
+            <label>Senha</label>
+            <input type='text'></input>
+            <div className='start-button' onClick={() => handleShowFrontPage()}>
+              Começar
+            </div>
+          </form>
+        </div>
+      </>}
     </div>
   );
 }

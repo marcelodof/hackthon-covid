@@ -16,7 +16,7 @@ export const StudentItem = ({name, hasAddress, hasWhatsApp, hasWifi, phone, show
             </div>
             {showPhone 
             ? <div className='student-phone'>
-                <AiFillPhone/> {phone}
+                <AiFillPhone className="phone-icon" /> {phone}
             </div>
             : <div className="icons-container">
                 <GoLocation style={!hasAddress && {color: '#ff6f69'}} className="icon" />

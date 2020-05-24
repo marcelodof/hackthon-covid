@@ -31,7 +31,10 @@
 }
 
 .student-phone {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
 }
 
 .check-icon {
@@ -41,4 +44,9 @@
     padding: 4px;
     border: 2px solid #8b9dc3;
     border-radius: 50%;
+}
+
+.phone-icon {
+    margin-right: 8px;
+    font-size: 22px;
 }

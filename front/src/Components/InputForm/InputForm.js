@@ -29,11 +29,11 @@ export const InputForm = (
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
                 <div className="form-input">
-                    <label>Exercício</label><br/>
+                    <label>Teoria</label><br/>
                     <input className="form-task-attachments" type="file"></input>
                 </div>
                 <div className="form-input">
-                    <label>Gabarito</label><br/>
+                    <label>Exercício</label><br/>
                     <input className="form-task-attachments" type="file"></input>
                 </div>
                 <div className="form-input">

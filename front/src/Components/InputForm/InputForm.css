@@ -26,10 +26,6 @@
     flex: 1;
 }
 
-/* .form-task-attachments::before {
-    content: 'Escolha um arquivo';
-} */
-
 .form-task-attachments {
     border: 1px solid black;
     border-radius: 3px;
@@ -37,7 +33,6 @@
     width: 30vw;
     height: 2vw;
     font-size: 12px;
-    /* padding: 2px; */
 }
 
 .form-task-attachments::-webkit-file-upload-button {

@@ -27,7 +27,7 @@
 }
 
 .icon {
-    color: #96ceb4;
+    color: #008744;
 }
 
 .student-phone {
@@ -49,4 +49,8 @@
 .phone-icon {
     margin-right: 8px;
     font-size: 22px;
+}
+
+.sent {
+    border: 2px solid #008744;
 }

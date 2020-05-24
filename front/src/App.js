@@ -71,7 +71,7 @@ function App() {
     setShowSucessAlert(true);
   }
 
-  const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''}`
+  const metricsText = `${defaultStudents.length} aluno${defaultStudents.length !== 1 ? 's' : ''} na turma`
   
   return (
     <div className="App">

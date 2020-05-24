@@ -15,7 +15,7 @@ export const StudentsFilter = ({handleFilter, studentsList, studentsMetrics, act
         setIsModalOpen(!isModalOpen)
     }
 
-    const metricsText = `${studentsMetrics.studentsCount} aluno${studentsMetrics.studentsCount !== 1 ? 's' : ''}, que representa ${studentsMetrics.studentsPercentage}%`
+    const metricsText = `${studentsMetrics.studentsCount} aluno${studentsMetrics.studentsCount !== 1 ? 's' : ''}, que representa ${studentsMetrics.studentsPercentage}% da turma`
 
     return (
         <React.Fragment>

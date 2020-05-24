@@ -86,5 +86,13 @@ export const DefaultStudents = [
         hasWifi: false,
         phone: 11957811231,
         homeworkHasBeenSent: false,
+    },
+    {
+      name: "Beatriz Mascarenhas",
+      hasAddress: true,
+      hasWhatsApp: true,
+      hasWifi: false,
+      phone: 11951231414,
+      homeworkHasBeenSent: false,
     }
   ]

@@ -36,26 +36,25 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     
     return (!homeworkSent
             ? <HomeworkInput toggleModal={toggleModal}
-                             headerText={"Enviar atividade por WhatsApp"}
-                             topic={topic}
-                             deadline={deadline}
-                             duration={duration}
-                             additionalInfo={additionalInfo}
-                             studentsList={studentsList}
-                             handleDeadlineChange={handleDeadlineChange}
-                             handleTopicChange={handleTopicChange}
-                             handleAdditionalInfoChange={handleAdditionalInfoChange}
-                             handleDurationChange={handleDurationChange}
-                             handleSeePreview={handleSeePreview}
-                             activeFilter={activeFilter}
-                             />
+                                topic={topic}
+                                deadline={deadline}
+                                duration={duration}
+                                additionalInfo={additionalInfo}
+                                studentsList={studentsList}
+                                handleDeadlineChange={handleDeadlineChange}
+                                handleTopicChange={handleTopicChange}
+                                handleAdditionalInfoChange={handleAdditionalInfoChange}
+                                handleDurationChange={handleDurationChange}
+                                handleSeePreview={handleSeePreview}
+                                activeFilter={activeFilter}
+                                />
             : <HomeworkPreview toggleModal={toggleModal}
-                               headerText={"Veja como ficou sua atividade!"}
-                               topic={topic}
-                               deadline={deadline}
-                               additionalInfo={additionalInfo}
-                               duration={duration}
-                               studentsList={studentsList}
-                               homeworkHasBeenSent={handleHomeworkSent}
-                               />)
-    }
+                                headerText={"Veja como ficou sua atividade!"}
+                                topic={topic}
+                                deadline={deadline}
+                                additionalInfo={additionalInfo}
+                                duration={duration}
+                                studentsList={studentsList}
+                                homeworkHasBeenSent={handleHomeworkSent}
+                                />)
+}

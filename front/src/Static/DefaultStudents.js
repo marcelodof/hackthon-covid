@@ -2,7 +2,6 @@ export const DefaultStudents = [
     {
       name: "Rafael Rahal",
       hasAddress: true,
-      hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: false,
       phone: 11987347656,
@@ -11,7 +10,6 @@ export const DefaultStudents = [
     {
       name: "Marcelo Dias",
       hasAddress: true,
-      hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: true,
       phone: 11987340986,
@@ -20,7 +18,6 @@ export const DefaultStudents = [
     {
       name: "Paulo de Paula",
       hasAddress: true,
-      hasSmartphone: true,
       hasWhatsApp: false,
       hasWifi: false,
       phone: 11987334897,
@@ -29,7 +26,6 @@ export const DefaultStudents = [
     {
       name: "Matheus Ishimoto",
       hasAddress: true,
-      hasSmartphone: false,
       hasWhatsApp: false,
       hasWifi: false,
       phone: 11954879990,
@@ -38,7 +34,6 @@ export const DefaultStudents = [
     {
       name: "Gabriel Pera",
       hasAddress: true,
-      hasSmartphone: true,
       hasWhatsApp: true,
       hasWifi: true,
       phone: 11987378945,
@@ -47,7 +42,6 @@ export const DefaultStudents = [
     {
       name: "Beatriz Silva",
       hasAddress: false,
-      hasSmartphone: false,
       hasWhatsApp: false,
       hasWifi: false,
       phone: 11955568731,
@@ -56,7 +50,6 @@ export const DefaultStudents = [
     {
         name: "Eduardo Tita",
         hasAddress: true,
-        hasSmartphone: true,
         hasWhatsApp: true,
         hasWifi: true,
         phone: 1175868731,
@@ -65,7 +58,6 @@ export const DefaultStudents = [
     {
         name: "Maria Paula de Souza",
         hasAddress: true,
-        hasSmartphone: true,
         hasWhatsApp: false,
         hasWifi: false,
         phone: 11368748731,
@@ -74,7 +66,6 @@ export const DefaultStudents = [
     {
         name: "Jorge Almeida",
         hasAddress: true,
-        hasSmartphone: false,
         hasWhatsApp: false,
         hasWifi: false,
         phone: 11957893731,
@@ -83,7 +74,6 @@ export const DefaultStudents = [
     {
         name: "André Navarro",
         hasAddress: true,
-        hasSmartphone: true,
         hasWhatsApp: true,
         hasWifi: false,
         phone: 11957811231,
@@ -92,10 +82,17 @@ export const DefaultStudents = [
     {
         name: "Paula de Andrade",
         hasAddress: true,
-        hasSmartphone: true,
         hasWhatsApp: true,
         hasWifi: false,
         phone: 11957811231,
         homeworkHasBeenSent: false,
+    },
+    {
+      name: "Beatriz Mascarenhas",
+      hasAddress: true,
+      hasWhatsApp: true,
+      hasWifi: false,
+      phone: 11951231414,
+      homeworkHasBeenSent: false,
     }
   ]

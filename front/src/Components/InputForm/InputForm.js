@@ -12,12 +12,11 @@ export const InputForm = (
      handleDeadlineChange,
      handleDurationChange,
      handleTopicChange,
-     theoryFile,
-     exerciseFile,
      handleTheoryFile,
      handleExerciseFile,
+     activeFilter,
      handleSeePreview}) => {
-    return  (
+        return  (
         <div className="input-wrapper">
             <form>
                 <div className="form-input">
@@ -40,6 +39,26 @@ export const InputForm = (
                     <label>Exercício</label><br/>
                     <input className="form-task-attachments" type="file" onChange={handleExerciseFile} />
                 </div>
+                {activeFilter === 'hasWhatsApp' && <>
+                    <div className="form-input">
+                        <label>Teoria</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                    <div className="form-input">
+                        <label>Exercício</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                </>}
+                {activeFilter === 'hasWifi' && <>
+                    <div className="form-input">
+                        <label>Vídeo Aula</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                    <div className="form-input">
+                        <label>Exercício</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                </>}
                 <div className="form-input">
                     <label>Informações Adicionais</label><br/>
                     <textarea className='textarea-form' onChange={handleAdditionalInfoChange} value={additionalInfo}></textarea>                          

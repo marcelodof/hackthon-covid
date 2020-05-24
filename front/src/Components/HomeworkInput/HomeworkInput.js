@@ -24,6 +24,7 @@ export const HomeworkInput = ({
         handleSeePreview,
         handleTheoryFile,
         handleExerciseFile,
+        activeFilter,
     }) => {
 
     const metricsText = `${studentsList.length} aluno${studentsList.length !== 1 ? 's' : ''}`
@@ -52,6 +53,7 @@ export const HomeworkInput = ({
                         exerciseFile={exerciseFile}
                         handleTheoryFile={handleTheoryFile}
                         handleExerciseFile={handleExerciseFile}
+                        activeFilter={activeFilter}
                     />
                 </div>
             </div>

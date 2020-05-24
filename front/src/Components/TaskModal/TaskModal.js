@@ -62,10 +62,10 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
                              handleSeePreview={handleSeePreview}
                              handleTheoryFile={handleTheoryFile}
                              handleExerciseFile={handleExerciseFile}
-                             
+                             activeFilter={activeFilter}
                              />
             : <HomeworkPreview toggleModal={toggleModal}
-                               headerText={"Podemos Enviar"}
+                               headerText={"Veja como ficou sua atividade!"}
                                topic={topic}
                                deadline={deadline}
                                additionalInfo={additionalInfo}

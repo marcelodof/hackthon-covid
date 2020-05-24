@@ -13,7 +13,6 @@ export const StudentsContainer = ({studentsList, showPhone, children, hasShadow}
                         return <StudentItem
                                 name={student.name}
                                 hasAddress={student.hasAddress}
-                                hasSmartphone={student.hasSmartphone}
                                 hasWhatsApp={student.hasWhatsApp}
                                 hasWifi={student.hasWifi}
                                 phone={student.phone}

@@ -1,5 +1,14 @@
 .form-input {
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+    justify-self: center;
 }
 
 .text-input-box {

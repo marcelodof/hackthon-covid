@@ -4,26 +4,36 @@ import { GrDocumentPdf } from 'react-icons/gr';
 import './HomeworkMessage.css'
 
 export const HomeworkMessage = ({topic, duration, deadline, additionalInfo, theoryFile, exerciseFile}) => {
-    console.log(theoryFile);
-    console.log(exerciseFile)
     return (
     <div className="message-wrapper">
         <div className="whatsapp-balloon">
-        Olá, tudo bem? <br/> 
-        Viemos aqui entregar sua tarefa de Matemática. <br />
-        Vamos as informações? <br />
-            Professor (a) : José da Silva <br />
-            Tópico:  {topic} <br />
-            Duração : {duration} <br />
-            📅Data final para entrega : {deadline} <br />
-            Informações adicionais: {additionalInfo} <br/>
-            Envie suas atividades dentro do prazo. Ótimos estudos!
+            <div>Olá, tudo bem? </div>
+            <div>Viemos aqui entregar sua tarefa de Matemática. </div>
+            <div>Vamos as informações?  </div><br/>
+            <div>Professor(a): José da Silva </div> <br/>
+            <div>Tópico: <strong> {topic}</strong></div> <br/>
+            <div>Duração: <strong> {duration} </strong></div> <br/>
+            <div>📅Data final para entrega: <strong> {deadline} </strong></div> <br/>
+            <div>Informações adicionais: <strong>{additionalInfo} </strong></div> <br/>
+            <div>Envie suas atividades dentro do prazo. Ótimos estudos!</div>
+        </div> 
+        { theoryFile && <div className="whatsapp-row">
+            <strong>Teoria:</strong>
         </div>
-        <div className="whatsapp-balloon">
+        }
+        { theoryFile && <div className="whatsapp-row">
             <GrDocumentPdf className="pdf-icon" /> {theoryFile}
         </div>
+        }
+        { exerciseFile && 
+        <div className="whatsapp-row">
+            <strong>Exercícios:</strong>
+        </div>
+        }
+        {exerciseFile && 
         <div className="whatsapp-balloon">
             <GrDocumentPdf className="pdf-icon" /> {exerciseFile}
         </div>
+        }
     </div>)
 }

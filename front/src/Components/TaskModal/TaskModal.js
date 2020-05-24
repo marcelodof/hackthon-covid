@@ -15,7 +15,6 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     const [exerciseFile, setExerciseFile] = useState(null)
 
     const handleTheoryFile = (event) => {
-        console.log(event)
         setTheoryFile(event.target.files[0].name);
     }
 

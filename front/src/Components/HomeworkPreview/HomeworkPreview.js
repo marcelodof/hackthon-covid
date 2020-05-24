@@ -33,8 +33,10 @@ export const HomeworkPreview = (
                     <StudentsContainer studentsList={studentsList} showPhone={true} />
                 </div>
             </div>
-            <div onClick={homeworkHasBeenSent} className="submit-button">
-                Enviar Atividade
+            <div className="button-wrapper">
+                <div onClick={homeworkHasBeenSent} className="submit-homework">
+                    Enviar Atividade
+                </div>
             </div>
         </div>
     </React.Fragment>

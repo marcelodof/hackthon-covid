@@ -12,6 +12,10 @@ export const InputForm = (
      handleDeadlineChange,
      handleDurationChange,
      handleTopicChange,
+     theoryFile,
+     exerciseFile,
+     handleTheoryFile,
+     handleExerciseFile,
      handleSeePreview}) => {
     return  (
         <div className="input-wrapper">
@@ -29,12 +33,12 @@ export const InputForm = (
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
                 <div className="form-input">
-                    <label>Exercício</label><br/>
-                    <input className="form-task-attachments" type="file"></input>
+                    <label>Teoria</label><br/>
+                    <input className="form-task-attachments" type="file" onChange={handleTheoryFile} />
                 </div>
                 <div className="form-input">
-                    <label>Gabarito</label><br/>
-                    <input className="form-task-attachments" type="file"></input>
+                    <label>Exercício</label><br/>
+                    <input className="form-task-attachments" type="file" onChange={handleExerciseFile} />
                 </div>
                 <div className="form-input">
                     <label>Informações Adicionais</label><br/>

@@ -14,12 +14,16 @@ export const HomeworkInput = ({
         deadline,
         duration,
         additionalInfo,
+        theoryFile,
+        exerciseFile,
         studentsList,
         handleDeadlineChange,
         handleTopicChange,
         handleAdditionalInfoChange,
         handleDurationChange,
         handleSeePreview,
+        handleTheoryFile,
+        handleExerciseFile,
     }) => {
 
     const metricsText = `${studentsList.length} aluno${studentsList.length !== 1 ? 's' : ''}`
@@ -44,6 +48,10 @@ export const HomeworkInput = ({
                         handleAdditionalInfoChange={handleAdditionalInfoChange}
                         handleDurationChange={handleDurationChange}
                         handleSeePreview={handleSeePreview}
+                        theoryFile={theoryFile}
+                        exerciseFile={exerciseFile}
+                        handleTheoryFile={handleTheoryFile}
+                        handleExerciseFile={handleExerciseFile}
                     />
                 </div>
             </div>

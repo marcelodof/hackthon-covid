@@ -16,7 +16,6 @@ export const ExerciseSent = ({shouldShowAlert, handleDismissClick}) => {
             <div className='exercise-dismiss' onClick={handleDismissClick}>
                 <IoMdClose/>
             </div>
-
         </div>
     )
 }

@@ -11,6 +11,17 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     const [duration, setDuration] = useState("");
     const [additionalInfo, setAdditionalInfo] = useState("");
     const [homeworkSent, setHomeworkSent] = useState(false);
+    const [theoryFile, setTheoryFile] = useState(null);
+    const [exerciseFile, setExerciseFile] = useState(null)
+
+    const handleTheoryFile = (event) => {
+        console.log(event)
+        setTheoryFile(event.target.files[0].name);
+    }
+
+    const handleExerciseFile = (event) => {
+        setExerciseFile(event.target.files[0].name);
+    }
 
     const handleHomeworkSent = () => {
         homeworkHasBeenSent();
@@ -41,12 +52,17 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
                              deadline={deadline}
                              duration={duration}
                              additionalInfo={additionalInfo}
+                             theoryFile={theoryFile}
+                             exerciseFile={exerciseFile}
                              studentsList={studentsList}
                              handleDeadlineChange={handleDeadlineChange}
                              handleTopicChange={handleTopicChange}
                              handleAdditionalInfoChange={handleAdditionalInfoChange}
                              handleDurationChange={handleDurationChange}
                              handleSeePreview={handleSeePreview}
+                             handleTheoryFile={handleTheoryFile}
+                             handleExerciseFile={handleExerciseFile}
+                             
                              />
             : <HomeworkPreview toggleModal={toggleModal}
                                headerText={"Podemos Enviar"}
@@ -56,5 +72,7 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
                                duration={duration}
                                studentsList={studentsList}
                                homeworkHasBeenSent={handleHomeworkSent}
+                               theoryFile={theoryFile}
+                               exerciseFile={exerciseFile}
                                />)
     }

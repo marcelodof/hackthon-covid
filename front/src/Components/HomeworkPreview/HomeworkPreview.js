@@ -6,7 +6,19 @@ import { HomeworkMessage } from '../HomeworkMessage/HomeworkMessage';
 
 import './HomeworkPreview.css';
 
-export const HomeworkPreview = ({toggleModal, headerText, topic, deadline, duration, additionalInfo, studentsList, homeworkHasBeenSent}) => { 
+export const HomeworkPreview = (
+    {
+        toggleModal,
+        headerText,
+        topic,
+        deadline,
+        duration,
+        additionalInfo,
+        studentsList,
+        homeworkHasBeenSent,
+        exerciseFile,
+        theoryFile
+    }) => { 
     return (
     <React.Fragment>
         <ModalHeader toggleModal={toggleModal} headerText={headerText} />
@@ -14,7 +26,7 @@ export const HomeworkPreview = ({toggleModal, headerText, topic, deadline, durat
             <div className="content-wrapper">
                 <div className="whatsapp-background">
                     <div className="message-container">
-                        <HomeworkMessage topic={topic} deadline={deadline} duration={duration} additionalInfo={additionalInfo} />
+                        <HomeworkMessage topic={topic} deadline={deadline} duration={duration} additionalInfo={additionalInfo} theoryFile={theoryFile} exerciseFile={exerciseFile} />
                     </div>
                 </div>
                 <div className="students-preview">

@@ -1,0 +1,19 @@
+.message-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.whatsapp-balloon {
+    color: #000;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-right: 22px;
+    background-color: #e1ffc7;
+    border-radius: 5px 0px 5px 5px;
+    font-size: 15px;
+    margin-top: 8px;
+    max-width: 290px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}

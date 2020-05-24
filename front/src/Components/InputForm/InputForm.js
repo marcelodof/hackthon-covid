@@ -18,15 +18,15 @@ export const InputForm = (
             <form>
                 <div className="form-input">
                     <label>Tópico</label><br/>
-                    <input type="text" onChange={handleTopicChange} value={topic}></input>
+                    <input className='text-input-box' type="text" onChange={handleTopicChange} value={topic}></input>
                 </div>
                 <div className="form-input">
                     <label>Prazo</label><br/>
-                    <input type="text" onChange={handleDeadlineChange} value={deadline}></input>
+                    <input className='text-input-box' type="text" onChange={handleDeadlineChange} value={deadline}></input>
                 </div>
                 <div className="form-input">
                     <label>Duração</label><br/>
-                    <input type="text" onChange={handleDurationChange} value={duration}></input>
+                    <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
                 <div className="form-task-attachments">
                     <label>Exercício</label><br/>
@@ -37,8 +37,8 @@ export const InputForm = (
                     <input type="file"></input>
                 </div>
                 <div className="form-input">
-                    <label>Informações Adcionais</label><br/>
-                    <textarea onChange={handleAdditionalInfoChange} value={additionalInfo}></textarea>                          
+                    <label>Informações Adicionais</label><br/>
+                    <textarea className='textarea-form' onChange={handleAdditionalInfoChange} value={additionalInfo}></textarea>                          
                 </div>
                 <div className="submit-button" onClick={handleSeePreview}>
                     Conferir o resumo

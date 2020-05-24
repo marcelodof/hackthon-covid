@@ -11,6 +11,7 @@ export const StudentsContainer = ({studentsList, showPhone, children, hasShadow}
                 {
                     studentsList.map((student) => {
                         return <StudentItem
+                                key={student.name}
                                 name={student.name}
                                 hasAddress={student.hasAddress}
                                 hasWhatsApp={student.hasWhatsApp}

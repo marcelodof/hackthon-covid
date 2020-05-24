@@ -4,8 +4,12 @@ import { GrDocumentPdf } from 'react-icons/gr';
 import './HomeworkMessage.css'
 
 const transformDate = (date) => {
-    const dateArray = date.split('-')
-    return `${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`
+    if (date === '') {
+        return null
+    } else {
+        const dateArray = date.split('-')
+        return `${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`
+    }
 }
 
 export const HomeworkMessage = ({topic, duration, deadline, additionalInfo, theoryFile, exerciseFile}) => {

@@ -1,6 +1,7 @@
 .message-wrapper {
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
 }
 .whatsapp-balloon {
     color: #000;
@@ -16,4 +17,11 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+}
+
+.pdf-icon {
+    margin-left: 4px;
+    margin-right: 8px;
+    padding: 4px;
+    border: 1px solid black;
 }

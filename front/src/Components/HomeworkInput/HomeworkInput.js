@@ -13,12 +13,16 @@ export const HomeworkInput = ({
         deadline,
         duration,
         additionalInfo,
+        theoryFile,
+        exerciseFile,
         studentsList,
         handleDeadlineChange,
         handleTopicChange,
         handleAdditionalInfoChange,
         handleDurationChange,
         handleSeePreview,
+        handleTheoryFile,
+        handleExerciseFile,
         activeFilter,
     }) => {
 
@@ -29,7 +33,7 @@ export const HomeworkInput = ({
         case 'hasWifi':
             return (
                 <div className='modal-wrapper'>
-                    <ModalHeader headerText={'Envie sua ativididade pelo WhatsApp'} toggleModal={toggleModal} />
+                    <ModalHeader headerText={'Envie sua atividade pelo WhatsApp'} toggleModal={toggleModal} />
                     <div className='modal-form'>
                         <StudentsContainer
                             studentsList={studentsList}
@@ -47,6 +51,10 @@ export const HomeworkInput = ({
                                 handleAdditionalInfoChange={handleAdditionalInfoChange}
                                 handleDurationChange={handleDurationChange}
                                 handleSeePreview={handleSeePreview}
+                                theoryFile={theoryFile}
+                                exerciseFile={exerciseFile}
+                                handleTheoryFile={handleTheoryFile}
+                                handleExerciseFile={handleExerciseFile}
                                 activeFilter={activeFilter}
                             />
                         </div>

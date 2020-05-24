@@ -11,6 +11,17 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     const [duration, setDuration] = useState("");
     const [additionalInfo, setAdditionalInfo] = useState("");
     const [homeworkSent, setHomeworkSent] = useState(false);
+    const [theoryFile, setTheoryFile] = useState(null);
+    const [exerciseFile, setExerciseFile] = useState(null)
+
+    const handleTheoryFile = (event) => {
+        console.log(event)
+        setTheoryFile(event.target.files[0].name);
+    }
+
+    const handleExerciseFile = (event) => {
+        setExerciseFile(event.target.files[0].name);
+    }
 
     const handleHomeworkSent = () => {
         homeworkHasBeenSent();
@@ -36,25 +47,31 @@ export const TaskModal = ({toggleModal, activeFilter, studentsList, homeworkHasB
     
     return (!homeworkSent
             ? <HomeworkInput toggleModal={toggleModal}
-                                topic={topic}
-                                deadline={deadline}
-                                duration={duration}
-                                additionalInfo={additionalInfo}
-                                studentsList={studentsList}
-                                handleDeadlineChange={handleDeadlineChange}
-                                handleTopicChange={handleTopicChange}
-                                handleAdditionalInfoChange={handleAdditionalInfoChange}
-                                handleDurationChange={handleDurationChange}
-                                handleSeePreview={handleSeePreview}
-                                activeFilter={activeFilter}
-                                />
+                             topic={topic}
+                             deadline={deadline}
+                             duration={duration}
+                             additionalInfo={additionalInfo}
+                             theoryFile={theoryFile}
+                             exerciseFile={exerciseFile}
+                             studentsList={studentsList}
+                             handleDeadlineChange={handleDeadlineChange}
+                             handleTopicChange={handleTopicChange}
+                             handleAdditionalInfoChange={handleAdditionalInfoChange}
+                             handleDurationChange={handleDurationChange}
+                             handleSeePreview={handleSeePreview}
+                             handleTheoryFile={handleTheoryFile}
+                             handleExerciseFile={handleExerciseFile}
+                             activeFilter={activeFilter}
+                             />
             : <HomeworkPreview toggleModal={toggleModal}
-                                headerText={"Veja como ficou sua atividade!"}
-                                topic={topic}
-                                deadline={deadline}
-                                additionalInfo={additionalInfo}
-                                duration={duration}
-                                studentsList={studentsList}
-                                homeworkHasBeenSent={handleHomeworkSent}
-                                />)
-}
+                               headerText={"Veja como ficou sua atividade!"}
+                               topic={topic}
+                               deadline={deadline}
+                               additionalInfo={additionalInfo}
+                               duration={duration}
+                               studentsList={studentsList}
+                               homeworkHasBeenSent={handleHomeworkSent}
+                               theoryFile={theoryFile}
+                               exerciseFile={exerciseFile}
+                               />)
+    }

@@ -12,7 +12,8 @@ export const InputForm = (
      handleDeadlineChange,
      handleDurationChange,
      handleTopicChange,
-     handleSeePreview}) => {
+     handleSeePreview,
+     activeFilter}) => {
     return  (
         <div className="input-wrapper">
             <form>
@@ -28,14 +29,26 @@ export const InputForm = (
                     <label>Duração</label><br/>
                     <input className='text-input-box' type="text" onChange={handleDurationChange} value={duration}></input>
                 </div>
-                <div className="form-input">
-                    <label>Teoria</label><br/>
-                    <input className="form-task-attachments" type="file"></input>
-                </div>
-                <div className="form-input">
-                    <label>Exercício</label><br/>
-                    <input className="form-task-attachments" type="file"></input>
-                </div>
+                {activeFilter === 'hasWhatsApp' && <>
+                    <div className="form-input">
+                        <label>Teoria</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                    <div className="form-input">
+                        <label>Exercício</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                </>}
+                {activeFilter === 'hasWifi' && <>
+                    <div className="form-input">
+                        <label>Vídeo Aula</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                    <div className="form-input">
+                        <label>Exercício</label><br/>
+                        <input className="form-task-attachments" type="file"></input>
+                    </div>
+                </>}
                 <div className="form-input">
                     <label>Informações Adicionais</label><br/>
                     <textarea className='textarea-form' onChange={handleAdditionalInfoChange} value={additionalInfo}></textarea>                          

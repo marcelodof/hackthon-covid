@@ -20,6 +20,7 @@ export const HomeworkInput = ({
         handleAdditionalInfoChange,
         handleDurationChange,
         handleSeePreview,
+        activeFilter,
     }) => {
 
     const metricsText = `${studentsList.length} aluno${studentsList.length !== 1 ? 's' : ''}`
@@ -44,6 +45,7 @@ export const HomeworkInput = ({
                         handleAdditionalInfoChange={handleAdditionalInfoChange}
                         handleDurationChange={handleDurationChange}
                         handleSeePreview={handleSeePreview}
+                        activeFilter={activeFilter}
                     />
                 </div>
             </div>

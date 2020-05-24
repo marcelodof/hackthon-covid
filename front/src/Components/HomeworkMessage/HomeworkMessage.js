@@ -40,7 +40,7 @@ export const HomeworkMessage = ({topic, duration, deadline, additionalInfo, theo
         </div>
         }
         {exerciseFile && 
-        <div className="whatsapp-balloon">
+        <div className="whatsapp-row">
             <GrDocumentPdf className="pdf-icon" /> {exerciseFile}
         </div>
         }
